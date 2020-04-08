@@ -1,0 +1,64 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+   
+    <ion-img slot="start" src="../../../assets/img/logo.png" class="logo"></ion-img>
+    <ion-title  start >Infos Agence</ion-title>
+    <ion-buttons slot="end">
+    <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+ 
+  <ion-avatar>
+    <img src="../../../assets/img/banque/{{infos.logo}}" style="zoom: 2.5;border-radius:2%;width:80px;height:80px;">
+  </ion-avatar>
+
+
+</ion-content> -->
+
+<ion-header translucent no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="light">
+        <ion-icon slot="start" name="ios-arrow-back"></ion-icon>
+        Infos agences
+      </ion-button>
+    </ion-buttons>
+    <ion-title>&nbsp;</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="checkmark-outline" ></ion-icon> 
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" slot="fixed" >
+  <div class="card">
+    <div class="header">
+      <div class="avatar">
+        <img src="../../../assets/img/banque/{{infos.logo}}" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="user-meta ion-text-center">
+      <h3 class="playername">{{infos.name}}</h3>
+      <h5 class="country">{{infos.ville}}</h5>
+      <ion-card>
+        <h6 class="ranking">En attente:  &nbsp;&nbsp;<ion-chip>
+         <ion-label>2</ion-label>
+          </ion-chip>
+        </h6>
+      </ion-card>
+     
+    </div>
+    <br><br>
+    <ion-button expand="full" color="primary">Réserver ticket</ion-button>
+    <ion-button expand="full" color="secondary">Géolocaliser agence</ion-button>
+  </div>
+</ion-content>
