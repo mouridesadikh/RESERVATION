@@ -45,4 +45,7 @@ export class FolderPage implements OnInit {
     alert5.present();
   }
 
+  favori(){
+    this.route.navigateByUrl('favori');
+  }
 }

@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'infos-agence',
     loadChildren: () => import('./pages/infos-agence/infos-agence.module').then( m => m.InfosAgencePageModule)
+  },
+  {
+    path: 'favori',
+    loadChildren: () => import('./pages/favori/favori.module').then( m => m.FavoriPageModule)
   }
 ];
 

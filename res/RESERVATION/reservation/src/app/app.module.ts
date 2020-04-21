@@ -8,6 +8,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import {GoogleMaps} from "@ionic-native/google-maps";
+import { AgmCoreModule } from '@agm/core';
+import { IonicStorageModule } from '@ionic/storage';
+import { AgmDirectionModule } from 'agm-direction'; 
 import {InfosAgencePageModule} from '../app/pages/infos-agence/infos-agence.module';
 @NgModule({
   declarations: [AppComponent],
@@ -15,12 +20,19 @@ import {InfosAgencePageModule} from '../app/pages/infos-agence/infos-agence.modu
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDJby-hPhgoq4hIhiwKiHYvYmEUn74qnBw'
+    }),
+    AgmDirectionModule, 
     AppRoutingModule,HttpClientModule,InfosAgencePageModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     HTTP,
+    Geolocation,
+    GoogleMaps,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
