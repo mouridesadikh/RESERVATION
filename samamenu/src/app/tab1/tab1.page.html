@@ -1,0 +1,149 @@
+<div class="page">
+    <ion-header [translucent]="true">
+        <div class="navbar navbar-page">
+            <div class="navbar-inner sliding">
+                <!-- <div class="left">
+                    <a href="#" class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="if-not-md">Back</span>
+                    </a>
+                </div> -->
+                <!-- <div class="title">
+                    SAMA MENU
+
+                </div> -->
+                <div class="center">
+                    <!-- <p style="text-align: right;font-size: 10px;">{{user.nom}}</p> -->
+                    <img src="../../assets/img/logo.png" alt="" style="width: 80px; height:50px">
+                </div>
+
+                <div class="subnavbar">
+                    <form class="searchbar searchbar-init" data-search-container=".search-list" data-search-in=".item-title">
+                        <div class="searchbar-inner">
+                            <div class="searchbar-input-wrap">
+                                <input type="search" placeholder="Search for product or stores">
+                                <i class="searchbar-icon"></i>
+                                <span class="input-clear-button"></span>
+                            </div>
+                            <span class="searchbar-disable-button">Cancel</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="right">
+                    <ion-icon name="person" color="primary" (click)="goToLoginPage()"></ion-icon>
+                    <!-- <img src="../../assets/img/logo.png" alt="" style="width: 80px; height:50px"> -->
+                </div>
+
+            </div>
+        </div>
+    </ion-header>
+
+    <ion-content class="page-content">
+        <!-- <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Tab 1</ion-title>
+        </ion-toolbar>
+    </ion-header> -->
+        <!-- home shop -->
+        <div class="segments-page">
+            <div class="home-shop">
+                <div class="header-image segments">
+                    <div class="container">
+                        <div class="swiper-container swiper-init" data-pagination='{"el": ".swiper-pagination"}' data-space-between="10">
+                            <!-- <div class="swiper-pagination"></div> -->
+                            <div class="swiper-wrapper">
+                                <ion-slides mode="ios" pager="ios" scrollbar="ios">
+                                    <ion-slide>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="../../../assets/img/slide1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </ion-slide>
+                                    <ion-slide>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="../../../assets/img/slide2.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </ion-slide>
+                                    <ion-slide>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <img src="../../../assets/img/slide3.png" alt="">
+                                            </a>
+                                        </div>
+                                    </ion-slide>
+                                </ion-slides>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-shop segments"><br>
+                    <div class="container" style="border-radius: 30px;margin-top: 10px;">
+                        <div style="border-radius: 10px;border: 3px solid #046628;">
+                            <!-- <div class="swiper-container swiper-init" data-scrollbar='{"el": ".swiper-scrollbar"}' data-space-between="10" data-slides-per-view="5">
+                                <div class="swiper-scrollbar">
+                                    <div class="swiper-scrollbar-drag"></div>
+                                </div> -->
+                            <div class="swiper-wrapper" style="margin-left: 10px; width: 100%;">
+                                <ion-item>
+                                    <ion-row>
+                                        <ion-col size="11">
+                                            <ion-tab-button tab="tab2">
+
+                                                <p style="font-size: 18px;font-style: oblique;font-weight: bold;margin-left: -15px;"> Retrouver votre plat du jour</p>
+
+                                            </ion-tab-button>
+                                        </ion-col>
+                                        <ion-col size="1">
+                                            <a href="#" style="margin-left: -2px;">
+                                                <ion-icon name="search" style="zoom: 1.5; "></ion-icon>
+                                            </a>
+                                        </ion-col>
+                                    </ion-row>
+
+                                </ion-item>
+
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="new-product product">
+                    <div class="container">
+                        <div class="wrap-title">
+                            <h3>Restaurant favoris</h3>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-50" *ngFor="let item of listFavorit">
+                                <div class="content">
+                                    <img src="{{url}}/storage/{{item.logo}}" alt="">
+                                    <div class="content-text">
+                                        <a href="/product-details/">
+                                            <p>{{item.nom}}</p>
+                                        </a>
+                                        <span class="price">{{item.adresse}} </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end home shop -->
+
+        <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+    </ion-content>
+</div>

@@ -1,0 +1,50 @@
+<div class="page">
+    <ion-header style="border:0px">
+        <div class="navbar navbar-page" style="border: 1px solid green;border-bottom-left-radius: 30px;border-bottom-right-radius: 30px;">
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a href="" (click)="goToBack()" class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="if-not-md">Back</span>
+                    </a>
+                </div>
+                <div class="title" style="font-size:large;">
+
+
+                </div>
+                <div class="right">
+                    <!-- <p style="text-align: right;font-size: 10px;">{{user.nom}}</p> -->
+                    <img src="../../assets/img/logo.png" alt="" style="width: 80px; height:50px">
+                </div>
+
+                <div class="subnavbar">
+                    <form class="searchbar searchbar-init" data-search-container=".search-list" data-search-in=".item-title">
+                        <div class="searchbar-inner">
+                            <div class="searchbar-input-wrap">
+                                <input type="search" placeholder="Search for product or stores">
+                                <i class="searchbar-icon"></i>
+                                <span class="input-clear-button"></span>
+                            </div>
+                            <span class="searchbar-disable-button">Cancel</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </ion-header>
+
+    <ion-content><br>
+        <ion-grid fixed style="border: 1px solid green;border-top-left-radius: 30px;border-top-right-radius: 30px;">
+            <ion-row>
+                <div class="card style-card" (click)="goToSpecialite()">
+                    <img src="../../assets/img/plat.png" alt="cards">
+                </div>
+                <hr>
+                <div class="card style-card">
+                    <img src="../../assets/img/restaurant.png" alt="cards">
+                </div>
+            </ion-row>
+        </ion-grid>
+
+    </ion-content>
+</div>

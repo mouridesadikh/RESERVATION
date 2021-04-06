@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+    <div class="navbar navbar-page">
+        <div class="navbar-inner sliding">
+
+            <!-- <div class="left">
+                <a href="" (click)="goToBack()" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="if-not-md">Back</span>
+                </a>
+            </div> -->
+            <div class="right">
+                <!-- <p style="text-align: right;font-size: 10px;">{{user.nom}}</p> -->
+                <img src="../../assets/img/logo.png" alt="" style="width: 80px; height:50px">
+            </div>
+        </div>
+    </div>
+</ion-header>
+<ion-content>
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col size="12">
+
+                <ion-button style="color: green;" (click)="goToSpecialite()" expand="block" fill="clear" shape="round">
+                    séléctionner spécialité
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12">
+                <ion-card>
+                    <div *ngFor="let item of plat">
+                        <ion-item>
+                            <ion-label>
+                                <p><span>{{item.libelle}}</span></p>
+
+                            </ion-label>
+
+                            <ion-label slot="end">
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                <!-- <span>change status </span> -->
+                                <label class="toggle toggle-init color-green">
+                                <input type="checkbox"  *ngIf="item.status == 'true'" checked  (click)="addMenu(item)">
+                                <input type="checkbox"   *ngIf="item.status == 'false'"  (click)="addMenu(item)">
+                                <span class="toggle-icon"></span>
+                                </label>
+
+                            </ion-label>
+                        </ion-item>
+
+                    </div>
+                </ion-card>
+            </ion-col>
+            <ion-col size="12">
+                <div *ngFor="let item of menu">
+                    <ion-item>
+                        <ion-icon slot="start" name="add"></ion-icon>
+                        <ion-label>{{item.libelle}}</ion-label>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <ion-label>{{item.prix}}</ion-label>
+                    </ion-item>
+                </div>
+            </ion-col>
+            <ion-col size="12">
+                <ion-button (click)="valider()">
+                    <ion-icon slot="start" name="add"></ion-icon>
+                    Valider le Menu
+                </ion-button>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>

@@ -1,0 +1,93 @@
+<div class="page">
+
+    <div class="navbar navbar-page" style="border: 1px solid green;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+        <div class="navbar-inner sliding">
+            <div class="left">
+                <a href="#" class="link back" (click)="retour()">
+                    <i class="icon icon-back"></i>
+                    <span class="if-not-md">Retour</span>
+                </a>
+            </div>
+            <div class="title" style="font-size:large;">
+
+
+            </div>
+            <div class="right">
+                <!-- <p style="text-align: right;font-size: 10px;">{{user.nom}}</p> -->
+                <img src="../../assets/img/logo.png" alt="" style="width: 80px; height:50px">
+            </div>
+
+            <div class="subnavbar">
+                <form class="searchbar searchbar-init" data-search-container=".search-list" data-search-in=".item-title">
+                    <div class="searchbar-inner">
+                        <div class="searchbar-input-wrap">
+                            <input type="search" placeholder="Search for product or stores">
+                            <i class="searchbar-icon"></i>
+                            <span class="input-clear-button"></span>
+                        </div>
+                        <span class="searchbar-disable-button">Cancel</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <ion-content>
+        <div class="page-content">
+
+            <!-- product -->
+            <div class="segments-page">
+                <div class="container">
+
+                    <div class="product product-page">
+                        <!-- <div id="mapId" style="width: 250px;height: 75px;"></div> -->
+
+                        <div class="row">
+                            <div class="col-100" *ngFor="let item of mayrecherch ">
+                                <div class="content">
+                                    <img src="{{url}}/storage/{{item.logo}}" alt="" height="200px;">
+
+                                    <div class="content-text">
+                                        <span class="price">{{item.nom}}</span>
+                                    </div>
+
+                                    <div class="content-text">
+                                        <p style="font-weight: bold;">Adresse: {{item.adresse}}</p>
+                                        <span>Tel : {{item.telephone}}</span>
+
+                                    </div>
+
+                                    <ion-row>
+                                        <ion-col size="6">
+                                            <ion-button (click)="voirmenu(item.menu)" color="primary" horizontal="end" expand="block" fill="clear" shape="round">
+                                                <ion-icon slot="start" name="eye"></ion-icon> Voir menu
+                                            </ion-button>
+                                        </ion-col>
+                                        <ion-col size="6">
+                                            <ion-button (click)="favorit(item)" color="danger" horizontal="end" expand="block" fill="clear" shape="round">
+                                                <ion-icon slot="start" name="star"></ion-icon> favorit
+                                            </ion-button>
+                                        </ion-col>
+                                    </ion-row>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+                    <ion-fab-button>
+                        <ion-icon name="add"></ion-icon>
+                    </ion-fab-button>
+                </ion-fab> -->
+            </div>
+            <!-- end product -->
+
+        </div>
+    </ion-content>
+</div>

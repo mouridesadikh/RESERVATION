@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+    <div class="navbar navbar-page">
+        <div class="navbar-inner sliding">
+
+            <div class="left">
+                <a href="" (click)="goToBack()" class="link back">
+                    <i class="icon icon-back"></i>
+                    <span class="if-not-md">Back</span>
+                </a>
+            </div>
+            <div class="right">
+                <!-- <p style="text-align: right;font-size: 10px;">{{user.nom}}</p> -->
+                <img src="../../assets/img/logo.png" alt="" style="width: 80px; height:50px">
+            </div>
+        </div>
+    </div>
+</ion-header>
+<ion-content>
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col size="12">
+
+                <ion-button color="primary" (click)="gotoChangeMenu()" expand="block" fill="clear" shape="round">
+                    Change Menu
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12">
+                <ion-card>
+                    <ion-list>
+                        <ion-item *ngFor="let item of mymenu">
+                            <ion-icon name="checkmark-outline" color="primary"></ion-icon>&nbsp;
+                            <ion-label>{{item.libelle}}</ion-label>
+                            <ion-label slot="end">{{item.prix}}</ion-label>
+                            <ion-icon name="trash-outline" slot="end" color="danger" (click)="deletOnPlatInMenu(item.id)"></ion-icon>
+                        </ion-item>
+                    </ion-list>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

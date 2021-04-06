@@ -1,0 +1,78 @@
+<div class="page">
+    <ion-header style="border:0px;background-color: #046628;">
+        <div class="navbar navbar-page" style="border: 1px solid green;border-radius: 30px;">
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a href="" (click)="goToBack()" class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="if-not-md">Back</span>
+                    </a>
+                </div>
+                <div class="title" style="font-size:large;">
+
+
+                </div>
+                <div class="right">
+                    <!-- <p style="text-align: right;font-size: 10px;">{{user.nom}}</p> -->
+                    <img src="../../assets/img/logo.png" alt="" style="width: 80px; height:50px">
+                </div>
+
+
+            </div>
+        </div>
+    </ion-header>
+    <div class="page-content" style="margin-top: 50%;">
+
+        <!-- sign in -->
+        <div class="segments-page">
+            <div class="container">
+
+                <div class="sign-in">
+                    <div class="content-box">
+                        <form class="list no-hairlines-md" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                            <ul>
+                                <li class="item-content item-input">
+                                    <div class="item-media">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Email</div>
+                                        <div class="item-input-wrap">
+                                            <input type="email" placeholder="Your Email" [(ngModel)]="email" formControlName="email">
+                                            <span class="input-clear-button"></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content item-input">
+                                    <div class="item-media">
+                                        <i class="fas fa-key"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title item-label">Password</div>
+                                        <div class="item-input-wrap">
+                                            <input type="password" placeholder="Your Password" [(ngModel)]="password" formControlName="password">
+                                            <span class="input-clear-button"></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button type="submit" class="buttons">Sign In</button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- end sign in -->
+
+    </div>
+    <div class="footer footer-page" style="border: 1px solid green;border-radius: 30px;">
+        <ion-footer>
+            <ion-toolbar>
+                <ion-title>tek si dara</ion-title>
+            </ion-toolbar>
+        </ion-footer>
+    </div>
+
+</div>

@@ -1,0 +1,7 @@
+{
+  "name": "samamenu",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

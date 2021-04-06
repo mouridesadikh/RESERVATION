@@ -1,0 +1,212 @@
+<div class="page" style="background-color: gainsboro;">
+
+
+    <div class="page-content">
+
+
+        <!-- account buyer -->
+        <div class="segments-page" *ngIf="user_data">
+            <div class="container">
+
+                <div class="account-buyer">
+
+                    <div class="account-header">
+                        <div class="mask"></div>
+                        <img src="../../../assets/img/logo.png" alt="">
+                        <div class="account-caption">
+                            <img src="../../../assets/images/people6.png" alt="">
+                            <div class="title-name">
+                                <h4>{{user_data.name}}</h4>
+                                <span>{{user_data.email}}</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-space"></div>
+                <div class="divider-space"></div>
+                <div class="divider-space"></div>
+                <ion-scroll scrollX="true">
+                    <ion-list style="background-color: gainsboro;">
+                        <div class="team" style="background-color: gainsboro;">
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col size="12" *ngFor="let item of user_data.restaurant">
+                                        <div class="content-box">
+                                            <img src="{{url}}/storage/{{item.logo}}" alt="">
+                                            <div class="content-text">
+                                                <ion-item (click)="showDetaille(item)">
+                                                    <ion-label>
+                                                        <p style="text-align: center;font-weight: bold;font-size: 16px;">{{item.nom}}</p>
+                                                    </ion-label>
+                                                </ion-item>
+                                                <ion-item (click)="showDetaille(item)">
+                                                    <ion-label style="margin-left: 0%;">
+                                                        <ion-icon slot="start" name="pin" color="primary"></ion-icon> {{item.adresse}}</ion-label>
+                                                    <ion-label slot="end">
+                                                        <ion-icon slot="start" name="call" color="primary"></ion-icon> {{item.telephone}}</ion-label>
+                                                </ion-item>
+                                                <ion-item>
+                                                    <ion-label>
+                                                        <p *ngIf="item.status == 'true'"><span style="color: green;">Ouvert</span></p>
+                                                        <p *ngIf="item.status == 'false'"><span style="color: red;">Férmer</span></p>
+                                                    </ion-label>
+                                                    <ion-label slot="end">
+                                                        <li>
+                                                            <span>change status </span>
+                                                            <label class="toggle toggle-init color-green" (click)="changeStatus(item)">
+                                                            <input type="checkbox" checked *ngIf="item.status == 'true'">
+                                                            <input type="checkbox"   *ngIf="item.status == 'false'">
+                                                            <span class="toggle-icon"></span>
+                                                            </label>
+                                                        </li>
+                                                    </ion-label>
+                                                </ion-item>
+
+                                            </div>
+                                        </div>
+                                    </ion-col>
+                                    <br>
+
+                                </ion-row>
+                            </ion-grid>
+
+                        </div>
+                    </ion-list>
+                </ion-scroll>
+
+
+
+            </div>
+        </div>
+        <div class="segments-page" *ngIf="!user_data">
+            <div class="container">
+
+                <div class="account-buyer">
+
+                    <div class="account-header">
+                        <div class="mask"></div>
+                        <ion-skeleton-text animated></ion-skeleton-text>
+                        <div class="account-caption">
+                            <ion-skeleton-text animated style="width: 50px;height: 50px; border-radius: 100%;"></ion-skeleton-text>
+                            <div class="title-name">
+                                <h4>
+                                    <ion-skeleton-text animated></ion-skeleton-text>
+                                </h4>
+                                <span> <ion-skeleton-text animated></ion-skeleton-text></span>
+                                <a href="/profile-edit/" class="buttons">
+                                    <ion-skeleton-text animated></ion-skeleton-text>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-space"></div>
+                <div class="divider-space"></div>
+                <div class="divider-space"></div>
+                <ion-list>
+                    <div class="team">
+                        <div class="row">
+                            <div class="col-50">
+                                <div class="content-box">
+                                    <ion-skeleton-text animated style="width: 30px;height: 30px;border-radius: 100%;"></ion-skeleton-text>
+                                    <h4>
+                                        <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+                                    </h4>
+                                    <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+                                </div>
+                            </div>
+                            <div class="col-50">
+                                <div class="content-box">
+                                    <ion-skeleton-text animated style="width: 30px;height: 30px;border-radius: 100%;"></ion-skeleton-text>
+                                    <h4>
+                                        <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+                                    </h4>
+                                    <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">
+                                <div class="content-box">
+                                    <ion-skeleton-text animated style="width: 30px;height: 30px;border-radius: 100%;"></ion-skeleton-text>
+                                    <h4>
+                                        <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+                                    </h4>
+                                    <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+                                </div>
+                            </div>
+                            <div class="col-50">
+                                <div class="content-box">
+                                    <ion-skeleton-text animated style="width: 30px;height: 30px;border-radius: 100%;"></ion-skeleton-text>
+                                    <h4>
+                                        <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+                                    </h4>
+                                    <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </ion-list>
+                <div class="account-list">
+                    <div class="list list-box">
+                        <ul>
+
+                            <li>
+                                <a href="">
+                                    <div class="item-content">
+                                        <div class="item-media">
+                                            <ion-skeleton-text animated style="width: 30px;height: 30px;border-radius: 100%;"></ion-skeleton-text>
+                                        </div>
+                                        <div class="item-inner">
+                                            <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="#">
+                                    <div class="item-content">
+                                        <div class="item-media">
+                                            <ion-skeleton-text animated style="width: 30px;height: 30px;border-radius: 100%;"></ion-skeleton-text>
+                                        </div>
+                                        <div class="item-inner">
+                                            <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- debut -->
+    <div class="toolbar tabbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+            <a href="#" class="tab-link " (click)="logout()" style="color: #97c93e;">
+                <ion-icon name="log-out" style="zoom: 1;"></ion-icon>
+                <span class="tabbar-label">Déconnexion</span>
+            </a>
+
+            <a href="#" class="tab-link " style="color: #97c93e;">
+                <ion-icon name="person" style="zoom: 1;"></ion-icon>
+                <span class="tabbar-label">Edit profil</span>
+            </a>
+            <a href="#" class="tab-link " style="color: #97c93e;" (click)="dorefresh()">
+                <ion-icon name="refresh-circle" style="zoom: 1;"></ion-icon>
+                <span class="tabbar-label">Actualiser</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- fin -->
+</div>
