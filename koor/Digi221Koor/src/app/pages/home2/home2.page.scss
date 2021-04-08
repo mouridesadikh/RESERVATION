@@ -1,0 +1,62 @@
+ion-content.background {
+    --background: url(../../../assets/bg.jpg) 0 0/100% 100% no-repeat;
+    background-size: cover;
+    text-align: center;
+    .body {
+        border-radius: 15px;
+        box-shadow: inset;
+        background-color: #ffff;
+        margin-top: 130px;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: max-content;
+    }
+}
+
+ion-toolbar {
+    --background: transparent no-repeat fixed center;
+    --color: black;
+    position: absolute;
+    top: 0;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.card1 {
+    height: 170px;
+    height: 170px;
+    background: url(../../../assets/img/Menu_NDJ.png) 0 0/180% 100% no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.card3 {
+    height: 170px;
+    height: 170px;
+    background: url(../../../assets/img/Menu_DB.png) 0 0/180% 100% no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.card2 {
+    height: 170px;
+    height: 170px;
+    background: url(../../../assets/img/Menu_HP.png) 0 0/180% 100% no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.card4 {
+    height: 170px;
+    background: url(../../../assets/img/Menu_GM.png) 0 0/180% 100% no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.card {
+    height: 170px;
+    background: url(../../../assets/img/BG_infos.png) 0 0/100% 100% no-repeat;
+    background-size: cover;
+    width: 100%;
+    //text-align: center;
+}

@@ -1,0 +1,47 @@
+<ion-header translucent>
+    <ion-toolbar style="height: 120px;margin-top: 40px;">
+        <ion-button (click)="onClick()" slot="start" color="success">
+            <ion-icon slot="icon-only" name="menu" style="zoom: 0.5;"></ion-icon>
+        </ion-button>
+        <!-- <ion-title style="text-align: center;">Header</ion-title> -->
+        <img src="../../assets/img/icon.png" alt="" style="justify-content: center; display: flex;align-items: center;margin-left: 35%;zoom: 1.25;">
+        <ion-button (click)="onClick()" slot="end" color="success">
+            <ion-icon slot="icon-only" name="menu" style="zoom: 0.5;"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+    <div class="body">
+
+        <ion-grid fixed>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-fab-button color="success">
+                        <ion-icon name="chevron-back-outline"></ion-icon>
+                    </ion-fab-button>
+                </ion-col>
+
+                <ion-col size="12">
+                    <img src="../../assets/img/icon.png" alt="" style="justify-content: center; display: flex;align-items: center;margin-left: 37%;zoom: 1.25;">
+                    <br><br><br>
+                </ion-col>
+
+                <ion-col size="12">
+
+                    <ion-button (click)="login()" expand="block" size="default" shape="round">
+                        <ion-icon slot="start" name="logo-facebook" style="zoom: 2.5;"></ion-icon>
+                        Se connecter avec Facebook
+                    </ion-button>
+
+                </ion-col>
+
+                <ion-col size="12" offset="0">
+                    <br><br><br><br>
+                    <img src="../../assets/img/im1.JPG" alt="" style="justify-content: center; display: flex;align-items: center;width: 650px;">
+                </ion-col>
+            </ion-row>
+
+        </ion-grid>
+
+    </div>
+</ion-content>

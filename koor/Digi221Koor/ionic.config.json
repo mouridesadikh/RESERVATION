@@ -1,0 +1,7 @@
+{
+  "name": "Digi221Koor",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
